@@ -6,6 +6,7 @@ public class SieveOfEratosthenes {
     /***
      * Returns a boolean array isPrime where index of array represents the number from 0(inclusive) to n(inclusive)
      * Marked True for Prime and False for Non-Prime
+     * Time Complexity: O(n*loglog(n))
      */
     static void sieveOfEratosthenes(int n) {
 
