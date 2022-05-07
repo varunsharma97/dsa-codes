@@ -19,6 +19,7 @@ public class FastPower {
      * The approach is that every even power n can be represented as x^n = (x^n/2)^2
      * and odd power n can be represented as x^n = x*(x^n/2)^2
      * Time Complexity of this solution is O(log(n))
+     * Auxiliary space of this solution is O(log(n))
      */
     static long fastPower(int x, int n) {
         //base case
