@@ -29,6 +29,11 @@ public class LeftRotateByD {
         return arr;
     }
 
+    /**
+     * Reversal Algorithm
+     * Time Complexity: Theta(n)
+     * Auxiliary Space: Theta(1)
+     */
     static int[] leftRotateByDReversalAlgo(int[] arr, int d) {
         int n = arr.length;
         Reverse.reverse(arr, 0, d - 1);
