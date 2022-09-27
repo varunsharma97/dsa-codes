@@ -34,8 +34,7 @@ public class MaxSumSubarray {
         int res = arr[0];
         int curr_val = arr[0];
         for (int i = 1; i < n; i++) {
-            if (arr[i] < curr_val + arr[i]) curr_val += arr[i];
-            else curr_val = arr[i];
+            curr_val = Math.max(curr_val + arr[i], arr[i]);
             res = Math.max(curr_val, res);
         }
         return res;
