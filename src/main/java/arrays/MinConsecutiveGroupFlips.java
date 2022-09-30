@@ -46,6 +46,23 @@ public class MinConsecutiveGroupFlips {
         }
     }
 
+    /***
+     * Finds minimum number of group flips to convert a binary array elements to all 1's or 0's
+     * Efficient Approach: Takes just 1 traversal to solve
+     * Time Complexity: O(n)
+     * Auxiliary space: O(1)
+     * @param arr an array with binary input elements
+     */
+    static void minFlipsEfficient(int[] arr) {
+        int n = arr.length;
+        for (int i = 1; i < n; i++)
+            if (arr[i] != arr[i - 1]) {
+                if (arr[i] != arr[0]) System.out.println("From " + i);
+                else System.out.println("To " + (i - 1));
+            }
+        if (arr[n - 1] != arr[0]) System.out.println("To " + (n - 1));
+    }
+
     public static void main(String[] args) {
         int[] a1 = {1, 1, 0, 0, 0, 1};
         int[] a2 = {1, 0, 0, 0, 1, 0, 0, 1, 1, 1, 1};
@@ -53,5 +70,9 @@ public class MinConsecutiveGroupFlips {
         minFlipsNaive(a1);
         minFlipsNaive(a2);
         minFlipsNaive(a3);
+
+        minFlipsEfficient(a1);
+        minFlipsEfficient(a2);
+        minFlipsEfficient(a3);
     }
 }
