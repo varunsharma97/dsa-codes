@@ -67,12 +67,15 @@ public class MinConsecutiveGroupFlips {
         int[] a1 = {1, 1, 0, 0, 0, 1};
         int[] a2 = {1, 0, 0, 0, 1, 0, 0, 1, 1, 1, 1};
         int[] a3 = {1, 1, 0, 0, 1, 0};
+        int[] a4 = {1, 1, 1};
         minFlipsNaive(a1);
         minFlipsNaive(a2);
         minFlipsNaive(a3);
+        minFlipsNaive(a4);
 
         minFlipsEfficient(a1);
         minFlipsEfficient(a2);
         minFlipsEfficient(a3);
+        minFlipsEfficient(a4);
     }
 }
